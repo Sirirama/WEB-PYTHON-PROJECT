@@ -1,0 +1,9 @@
+li a {
+    color: green;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    padding-top: 10px;
+}

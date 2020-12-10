@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block title %} Results {% endblock %}
+{% block content %}
+<form method="POST" action="{% url 'blog:about' %}">
+    {% csrf_token %}
+    <ul class="list-group list-group-flush">
+        {% for name in question_list %}
+        <li class="list-group-item {% if forloop.counter == 2 %} active {% endif %}">{{name}}</li>
+        {% endfor %}
+      </ul>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
